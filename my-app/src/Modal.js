@@ -9,13 +9,18 @@ const Modal = props => {
         <div className='modal'>
             <div className='modal-content'>
                 <div className='modal-header'>
-                    <h4>head</h4>
+                    <h1>New Reply</h1>
                 </div>
                 <div className='modal-body'>
-                    <h4>body</h4>
+                    <input placeholder='Name' id="mname"></input>
+                    <br/>
+                    <input placeholder='Write a new post' id="mbody-text"></input>
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={() => props.onClose()}>submit</button>
+                    <button onClick={() => {
+                        props.onClose();
+                        props.onSubmit();
+                    }}>reply</button>
                 </div>
             </div>
         </div>

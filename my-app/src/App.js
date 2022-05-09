@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import Reply from './Reply.js'
+import Comment from './Comment.js'
 import React, { useEffect, useState } from 'react';
 
 function App() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    var comment = <Reply name={document.getElementById('name').value} body={document.getElementById('body-text').value}/>
-    console.log(comment)
-    setData(data);
-  })
+  // useEffect(() => {
+  //   />
+  //   console.log(comment)
+  //   setData(data);
+  // })
 
 
   return (
@@ -27,7 +27,13 @@ function App() {
                     <input placeholder='Write a new post' id="body-text"></input>
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={() => setData()}>submit</button>
+                    <button onClick={() => {
+                      console.log("HERE")
+                      var dName = document.getElementById("name").value;
+                      var dBody = document.getElementById("body-text").value;
+                      var comment = <Comment />
+                      setData([...data, comment]);
+                    }}>submit</button>
                 </div>
             </div>
         </div>
