@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Reply from './Reply.js'
 
 const Modal = props => {
     if(!props.show){
@@ -17,10 +18,19 @@ const Modal = props => {
                     <input placeholder='Write a new post' id="mbody-text"></input>
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={() => {
+                    <button onClick={()=>{
                         props.onClose();
-                        props.onSubmit();
-                    }}>reply</button>
+                    }}>Cancel</button>
+                    <button onClick={() => {
+                        if(!props.reply){
+                            props.onSubmit();
+                            props.onClose();
+                        } else{
+                            var newReply = <Reply />
+                            props.onSubmit(newReply);
+                            props.onClose();
+                        }
+                    }}>Reply</button>
                 </div>
             </div>
         </div>

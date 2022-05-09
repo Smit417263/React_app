@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Modal from './Modal.js'
-import Reply from './Reply'
+import Reply from './Reply.js'
 
 function Comment(){
     const [name, setName] = useState(document.getElementById('name').value);

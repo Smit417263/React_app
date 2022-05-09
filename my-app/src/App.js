@@ -28,9 +28,6 @@ function App() {
                 </div>
                 <div className='modal-footer'>
                     <button onClick={() => {
-                      console.log("HERE")
-                      var dName = document.getElementById("name").value;
-                      var dBody = document.getElementById("body-text").value;
                       var comment = <Comment />
                       setData([...data, comment]);
                     }}>submit</button>
