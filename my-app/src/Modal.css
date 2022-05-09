@@ -1,0 +1,32 @@
+.modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.modal-content{
+    background-color: rgb(200, 169, 169);
+    width: 5000px;
+  
+
+}
+
+.modal-body{
+    background-color: rgb(200, 169, 169);
+    padding: 10px;
+    border-style: solid;
+}
+
+.modal-header{
+    background-color: rgb(200, 169, 169);
+    padding: 10px;
+}
+
+.modal-footer{
+    background-color: rgb(200, 169, 169);
+}
