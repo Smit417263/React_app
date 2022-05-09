@@ -22,6 +22,14 @@ const Modal = props => {
                         props.onClose();
                     }}>Cancel</button>
                     <button onClick={() => {
+                        if(document.getElementById("mname").value == ""){
+                            alert("Add Name");
+                            return
+                          }
+                        if(document.getElementById("mbody-text").value == ""){
+                        alert("Add Reply Text");
+                        return
+                        }
                         if(!props.reply){
                             props.onSubmit();
                             props.onClose();
