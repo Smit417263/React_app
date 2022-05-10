@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Reply from './Reply.js'
+import './Modal.css'
 
 const Modal = props => {
     if(!props.show){
         return null;
     }
-
+    
     return (
         <div className='modal'>
             <div className='modal-content'>
+                <p hidden id='indent'>40</p>
                 <div className='modal-header'>
                     <h1>New Reply</h1>
                 </div>
@@ -34,7 +36,9 @@ const Modal = props => {
                             props.onSubmit();
                             props.onClose();
                         } else{
-                            var newReply = <Reply />
+                            var tmpIdnt = document.getElementById('indent').innerText * 1;
+                            document.getElementById('indent').innerText = tmpIdnt + 40;
+                            var newReply = <Reply/>
                             props.onSubmit(newReply);
                             props.onClose();
                         }
