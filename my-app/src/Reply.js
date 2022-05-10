@@ -7,19 +7,20 @@ function Reply(){
     const [show, setShow] = useState(false)
     const [cnt, setCnt] = useState(0);
     const [replies, setReplies] = useState([])
+  
     return (
         <React.Fragment>
-            <p>{name.value}</p>
-            <p>{body.value}</p>
+            <p style={{color:"blue",marginLeft:"20px"}}>{name.value}</p>
+            <p style={{marginLeft:"20px"}}>{body.value}</p>
 
-            <button onClick={() => setCnt(cnt + 1)}>^</button>
+            <button  style={{marginLeft:"20px"}} onClick={() => setCnt(cnt + 1)}>^</button>
             <br />
-            <a>{cnt}</a>
+            <p style={{marginLeft:"20px"}}>{cnt}</p>
             <br />
-            <button onClick={() => setCnt(cnt - 1)}>v</button>
+            <button  style={{marginLeft:"20px"}} onClick={() => setCnt(cnt - 1)}>v</button>
             <br />
             <br />
-            <button onClick={() => setShow(true)}>Reply</button>
+            <button  style={{marginLeft:"20px"}} onClick={() => setShow(true)}>Reply</button>
             <Modal onClose={() => setShow(false)} onSubmit={(newReply) => {
                 setReplies([...replies, newReply])
             }} show={show} reply={true}/>

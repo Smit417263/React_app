@@ -12,10 +12,10 @@ function Comment(){
     return (
         <React.Fragment>
             <div>
-                <p>{name}</p>
+                <p style={{color:"blue"}}>{name}</p>
                 <p>{body}</p>
                 
-                <button onClick={() => setCnt(cnt + 1)}>^</button>
+                <button  onClick={() => setCnt(cnt + 1)}>^</button>
                 <br />
                 <a>{cnt}</a>
                 <br />
